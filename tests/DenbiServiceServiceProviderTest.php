@@ -2,13 +2,13 @@
 
 namespace Biigle\Tests\Modules\DenbiService;
 
-use Biigle\Modules\DenbiService\ModuleServiceProvider;
+use Biigle\Modules\DenbiService\DenbiServiceServiceProvider;
 use TestCase;
 
-class ModuleServiceProviderTest extends TestCase
+class DenbiServiceServiceProviderTest extends TestCase
 {
     public function testServiceProvider()
     {
-        $this->assertTrue(class_exists(ModuleServiceProvider::class));
+        $this->assertTrue(class_exists(DenbiServiceServiceProvider::class));
     }
 }
