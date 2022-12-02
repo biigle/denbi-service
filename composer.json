@@ -22,8 +22,8 @@
     "extra": {
       "laravel": {
           "providers": [
-              "Biigle\\Modules\\DenbiService\\ModuleServiceProvider"
+              "Biigle\\Modules\\DenbiService\\DenbiServiceServiceProvider"
           ]
       }
-  },
+  }
 }
