@@ -1,8 +1,8 @@
 <?php
 
-namespace Biigle\Tests\Modules\Module;
+namespace Biigle\Tests\Modules\DenbiService;
 
-use Biigle\Modules\Module\ModuleServiceProvider;
+use Biigle\Modules\DenbiService\ModuleServiceProvider;
 use TestCase;
 
 class ModuleServiceProviderTest extends TestCase

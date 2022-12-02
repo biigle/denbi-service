@@ -1,6 +1,6 @@
 <?php
 
-namespace Biigle\Modules\Module;
+namespace Biigle\Modules\DenbiService;
 
 use Biigle\Services\Modules;
 use Illuminate\Routing\Router;
@@ -18,18 +18,18 @@ class ModuleServiceProvider extends ServiceProvider
    */
     public function boot(Modules $modules, Router $router)
     {
-        $this->loadViewsFrom(__DIR__.'/resources/views', 'module');
+        $this->loadViewsFrom(__DIR__.'/resources/views', 'denbi-service');
 
-        $router->group([
-            'namespace' => 'Biigle\Modules\Module\Http\Controllers',
-            'middleware' => 'web',
-        ], function ($router) {
-            require __DIR__.'/Http/routes.php';
-        });
+        // $router->group([
+        //     'namespace' => 'Biigle\Modules\Module\Http\Controllers',
+        //     'middleware' => 'web',
+        // ], function ($router) {
+        //     require __DIR__.'/Http/routes.php';
+        // });
 
-        $modules->register('module', [
+        $modules->register('denbi-service', [
             'viewMixins' => [
-                'dashboardMain',
+                'navbarHelpItem',
             ],
             'controllerMixins' => [
                 //
@@ -39,9 +39,9 @@ class ModuleServiceProvider extends ServiceProvider
             ],
         ]);
 
-        $this->publishes([
-            __DIR__.'/public/assets' => public_path('vendor/module'),
-        ], 'public');
+        // $this->publishes([
+        //     __DIR__.'/public/assets' => public_path('vendor/denbi-service'),
+        // ], 'public');
     }
 
     /**

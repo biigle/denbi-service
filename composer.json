@@ -1,11 +1,11 @@
 {
-    "name": "biigle/module",
-    "description": "A template for a new BIIGLE module.",
+    "name": "biigle/denbi-service",
+    "description": "A module to add the de.NBI service evaluation link to the help menu.",
     "keywords": ["biigle", "biigle-module"],
     "license": "GPL-3.0-only",
     "support": {
-      "source": "https://github.com/biigle/module",
-      "issues": "https://github.com/biigle/module/issues"
+      "source": "https://github.com/biigle/denbi-service",
+      "issues": "https://github.com/biigle/denbi-service/issues"
     },
     "homepage": "https://biigle.de",
     "authors": [
@@ -16,7 +16,14 @@
     ],
     "autoload": {
       "psr-4": {
-         "Biigle\\Modules\\Module\\": "src"
+         "Biigle\\Modules\\DenbiService\\": "src"
       }
-    }
+    },
+    "extra": {
+      "laravel": {
+          "providers": [
+              "Biigle\\Modules\\DenbiService\\ModuleServiceProvider"
+          ]
+      }
+  },
 }
